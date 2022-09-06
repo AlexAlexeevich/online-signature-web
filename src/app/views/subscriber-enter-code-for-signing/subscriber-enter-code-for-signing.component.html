@@ -1,0 +1,41 @@
+<div class="subscriber-page">
+  <form [formGroup]="codeForm" *ngIf="!isShow;else other_content">
+    <div class="container-fluid">
+      <!--      <div class="row">-->
+
+      <!--      </div>-->
+      <!--    <div class="col">-->
+      <div class="row align-items-end" id="row-text">
+        <div class="col-text text-center">
+          <mat-form-field class="my-form-field" id="iii" appearance="fill" >
+            <input class="input" #inputCode matInput formControlName="code" mask="000000">
+          </mat-form-field>
+          <p>Для подтверждения подписания договора Вам отправлено сообщение с СМС кодом</p>
+          <p>Запросить код повторно можно через {{seconds}} секунд</p>
+        </div>
+      </div>
+      <div class="row" id="row-button">
+        <!--        <div class="col ">-->
+        <div class="text-center">
+          <button id="basic" type="button" class="btn-sm btn-send" mat-raised-button (click)="onSubmit()">
+            Ввод
+          </button>
+        </div>
+        <!--        </div>-->
+      </div>
+      <!--    </div>-->
+    </div>
+  </form>
+  <ng-template #other_content>
+    <div class="container-fluid">
+      <div class="row align-items-end">
+        <div class="col-text text-center">
+          <p class="label">Договор подписан.</p>
+        </div>
+      </div>
+    </div></ng-template>
+</div>
+
+
+
+

@@ -1,0 +1,45 @@
+<div class="subscriber-page">
+  <form [formGroup]="codeForm">
+  <div class="container-fluid">
+    <!--    <div class="col">-->
+    <div class="row align-items-end" id="row-text">
+      <div class="col-text">
+        <div class="row">
+          <div class="col-1 col-sm-2 col-md-3 col-lg-4">
+          </div>
+          <div class="col-10 col-sm-8 col-md-6 col-lg-4 col-list">
+            <p class="text-center">Документы доступные для ознакомления и подписания</p>
+            <ul class = "list-group">
+              <li *ngFor="let c of contracts" class = "list-group-item>">
+                <a href="#" (click)="openPdf(c.id)">{{c.nameContract}}</a>
+              </li>
+            </ul>
+            <div class="row-t">
+              <div class="left-column"><label>Введите Ваш e-mail</label></div>
+              <div class="right-column">
+
+                <mat-form-field class="email-form-field" appearance="fill" >
+                  <input class="input" matInput formControlName="subscriberEmail">
+                </mat-form-field>
+              </div>
+            </div>
+          </div >
+          <div class="col-1 col-sm-2 col-md-3 col-lg-4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="row-button">
+      <div class="text-center">
+        <button id="basic" type="button" class="btn-sm btn-send" mat-raised-button (click)="onSubmit()">
+          Подписать документы смс подписью
+        </button>
+      </div>
+    </div>
+    <!--    </div>-->
+  </div>
+  </form>
+</div>
+
+
+

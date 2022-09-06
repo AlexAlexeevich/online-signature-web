@@ -1,0 +1,59 @@
+.container-fluid {
+  height: 100%;
+  position: absolute;
+  /*background-color: green;*/
+  background-color: #000000;
+  /*background-size: 90% 100%;*/
+  /*background-repeat: no-repeat;*/
+  /*min-height: 100px;*/
+
+}
+
+.btn-send {
+  background: #6699FF;
+  color: #E6E6FA;
+  /*font-weight: 300;*/
+  letter-spacing:0.5px;
+  width:auto;
+}
+
+#row-text {
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 50%;
+  color: #888888;
+}
+
+#row-button {
+  padding-top: 30px;
+  min-height: 50%;
+  color: #E6E6FA;
+}
+
+p {
+  padding-top: 10px;
+}
+
+.my-form-field {
+  width: 100px;font-size: 19px;
+}
+
+::ng-deep .mat-form-field-underline::before, ::ng-deep .mat-form-field-ripple {
+  background-color: #E6E6FA !important;
+  color: #E6E6FA !important;
+}
+
+::ng-deep .my-form-field input {
+  caret-color: white !important;
+}
+
+.label {
+  padding-top: 150px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 50%;
+  color: #E6E6FA;
+}
+
+
+
